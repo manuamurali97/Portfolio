@@ -18,7 +18,7 @@ export const Banner = () => {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [titles.length]);
 
   return (
     <section className="banner" id="home">
