@@ -32,7 +32,7 @@ export const About = () => {
             </p>
 
              <div className="resume-section">
-              <h3>Resume</h3>
+              <h3>Project Overview</h3>
 
               <iframe
                 src="/ProjectOverview.pdf"
