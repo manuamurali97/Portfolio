@@ -35,18 +35,18 @@ export const About = () => {
               <h3>Resume</h3>
 
               <iframe
-                src="/ManuaMurali__CV__.pdf"
+                src="/ProjectOverview.pdf"
                 title="Resume"
                 className="resume-preview"
               ></iframe>
 
               <a
-                href="/ManuaMurali__CV__.pdf"
+                href="/ProjectOverview.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="resume-link"
               >
-                Open full resume ↗
+                Open Project Overview ↗
               </a>
             </div>
           </Col>
