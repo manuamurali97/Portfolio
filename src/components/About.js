@@ -32,7 +32,7 @@ export const About = () => {
             </p>
 
              <div className="resume-section">
-              <h3>Project Overview</h3>
+              <h3>Projects Overview</h3>
 
               <iframe
                 src="/ProjectOverview.pdf"
@@ -46,7 +46,7 @@ export const About = () => {
                 rel="noreferrer"
                 className="resume-link"
               >
-                Open Project Overview ↗
+                Open Projects Overview ↗
               </a>
             </div>
           </Col>
