@@ -7,7 +7,6 @@ import projImg1 from '../assets/img/chatappImg.png';
 import projImg2 from '../assets/img/aidocImg.png';
 import projImg3 from '../assets/img/motionImg.png';
 import projImg4 from '../assets/img/movieappImg.png';
-import projImg5 from '../assets/img/portfolioImg.png';
 import projImg7 from '../assets/img/blogImg.png';
 import projImg8 from '../assets/img/formImg.png';
 import projImg9 from '../assets/img/taskappImg.png';
