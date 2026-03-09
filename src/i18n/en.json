@@ -1,0 +1,53 @@
+{
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "Get to know me"
+  },
+  "banner": {
+    "intro": "Hi, I’m",
+    "description": "I design and build scalable web applications that combine clean frontend architecture with structured backend systems and intelligent data workflows. My work focuses on translating complex technical requirements into reliable, user-focused products.",
+    "titles": [
+      "Full-Stack Engineer",
+      "Frontend Systems Developer",
+      "AI and Data Integrator"
+    ]
+  },
+  "skills": {
+  "title": "Skills",
+  "description": "Tools and systems I rely on to design, build, and scale modern web products.",
+  "core": "Core Engineering",
+  "frontend": "Frontend Systems",
+  "backend": "Backend & APIs",
+  "ai": "AI & Data Systems",
+  "infrastructure": "Infrastructure & DevOps"
+},
+
+    "projects": {
+  "title": "Recent Works",
+  "description": "Some of the systems and applications I’ve designed and built.",
+  "systems": "Systems",
+  "applications": "Applications",
+  "experiments": "Labs",
+  "github": "View on GitHub"
+},
+    "about": {
+  "title": "About Me",
+    "p1": "I’m a full-stack developer who enjoys building products from idea to reality. I like working across the stack like shaping clean frontends, structuring reliable backends, and making sure everything connects smoothly.",
+
+    "p2": "With a background in Data Science, I naturally think in systems. I enjoy solving problems in a structured way and building tools that combine data, AI, and real user needs.",
+
+    "p3": "Outside of work, I’m always exploring something. New frameworks, small side projects, or creative UI ideas keeps me engaged. Drawing and photography are also part of my world, and they influence how I think about design and detail.",
+
+    "p4": "If you're building something interesting and think I could contribute, I’d genuinely love to connect :)",
+    "portfolioTitle": "Explore my recent works",
+  "portfolioLink": "Open Projects Overview ↗"
+},
+"contact": {
+  "title": "Get in touch"
+},
+"footer": {
+  "text": "© 2026 Manua Murali · Built with React"
+}
+}

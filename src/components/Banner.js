@@ -2,23 +2,24 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/Webimg1.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 export const Banner = () => {
-  const titles = [
-    "Full-Stack Developer",
-    "React & TypeScript Developer",
-    "JavaScript & Python Developer",
-  ];
+  const { translations, language } = useLanguage();
+  const titles = translations.banner.titles;
+  
 
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % titles.length);
-    }, 2500);
+  setIndex(0); // reset when language changes
 
-    return () => clearInterval(interval);
-  }, [titles.length]);
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % titles.length);
+  }, 2500);
+
+  return () => clearInterval(interval);
+}, [titles, language]);
 
   return (
     <section className="banner" id="home">
@@ -26,10 +27,10 @@ export const Banner = () => {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <h1>
-              Hi, I’m <span className="highlight">Manua Murali</span>
+              {translations.banner.intro}{" "}
+              <span className="highlight">Manua Murali</span>
             </h1>
 
-            <span className="tagline">Welcome to my Portfolio</span>
 
             <AnimatePresence mode="wait">
               <motion.h2
@@ -45,9 +46,7 @@ export const Banner = () => {
             </AnimatePresence>
 
             <p>
-              I’m a full-stack developer specializing in building modern,
-              scalable web applications using JavaScript, TypeScript, and React,
-              with a strong foundation in Python and data-driven thinking.
+              {translations.banner.description}
             </p>
           </Col>
 

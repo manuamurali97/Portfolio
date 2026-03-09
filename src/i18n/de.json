@@ -1,0 +1,52 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "about": "Über mich"
+  },
+  "banner": {
+  "intro": "Hallo, ich bin",
+  "description": "Ich konzipiere und entwickle skalierbare Webanwendungen, die saubere Frontend-Architektur mit strukturierten Backend-Systemen und intelligenten Daten-Workflows verbinden. Mein Fokus liegt darauf, komplexe technische Anforderungen in zuverlässige und benutzerorientierte Produkte zu übersetzen.",
+  "titles": [
+    "Full-Stack Engineer",
+    "Frontend-Systementwickler",
+    "AI- & Data-Integrator"
+  ]
+},
+ "skills": {
+  "title": "Fähigkeiten",
+  "description": "Werkzeuge und Systeme, mit denen ich moderne Webprodukte entwerfe, entwickle und skaliere.",
+  "core": "Technische Grundlagen",
+  "frontend": "Frontend-Systeme",
+  "backend": "Backend & APIs",
+  "ai": "KI- & Daten-Systeme",
+  "infrastructure": "Infrastruktur & DevOps"
+},
+    "projects": {
+  "title": "Aktuelle Werke",
+  "description": "Eine kuratierte Auswahl an Systemen und Anwendungen, die ich konzipiert und entwickelt habe.",
+  "systems": "Systeme",
+  "applications": "Anwendungen",
+  "experiments": "Labs",
+  "github": "Auf GitHub ansehen"
+},
+    "about": {
+  "title": "Über mich",
+  "p1": "Ich bin Full-Stack-Entwickler und habe Freude daran, Produkte von der Idee bis zur Umsetzung zu begleiten. Ich arbeite gerne über den gesamten Stack hinweg, von klar strukturierten Frontends über stabile Backends bis hin zu sauberen Verbindungen zwischen allen Komponenten.",
+
+"p2": "Durch meinen Hintergrund in Data Science denke ich automatisch in Systemen. Ich löse Probleme strukturiert und entwickle gerne Lösungen, die Daten, KI und echte Nutzerbedürfnisse sinnvoll verbinden.",
+
+"p3": "Auch außerhalb der Arbeit probiere ich gerne Neues aus – neue Frameworks, kleine Side-Projekte oder kreative UI-Ideen halten mich neugierig. Zeichnen und Fotografie gehören ebenfalls dazu und beeinflussen, wie ich über Design und Details nachdenke.",
+
+"p4": "Wenn Sie an etwas Spannendem arbeiten und denken, dass ich gut dazu passen könnte, freue ich mich über einen Austausch :)",
+  "portfolioTitle": "Einblick in meine aktuellen Projekte",
+  "portfolioLink": "Projektübersicht öffnen ↗"
+},
+"contact": {
+  "title": "Kontakt"
+},
+"footer": {
+  "text": "© 2026 Manua Murali · Entwickelt mit React"
+}
+}

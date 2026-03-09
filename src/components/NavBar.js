@@ -6,11 +6,13 @@ import logo from '../assets/img/M-logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon.png';
 
-
+import { useLanguage } from "../context/LanguageContext";
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const { language, toggleLanguage } = useLanguage();
+    const { translations } = useLanguage();
 
     useEffect(()=>{
         const onScroll = () => {
@@ -44,11 +46,34 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link 
+              href="#home" 
+              className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} 
+              onClick={() => onUpdateActiveLink('home')}
+            >
+              {translations.navbar.home}
+            </Nav.Link>
+
+            <Nav.Link 
+              href="#skills" 
+              className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} 
+              onClick={() => onUpdateActiveLink('skills')}
+            >
+              {translations.navbar.skills}
+            </Nav.Link>
+
+            <Nav.Link 
+              href="#projects" 
+              className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} 
+              onClick={() => onUpdateActiveLink('projects')}
+            >
+              {translations.navbar.projects}
+            </Nav.Link>
           </Nav>
           <span className='navbar-text'>
+            <button className="lang-toggle" onClick={toggleLanguage}>
+              {language === "en" ? "DE" : "EN"}
+            </button>
             <div className='social-icon'>
                 <a href='https://www.linkedin.com/in/manua-murali/' target='_blank' rel='noreferrer' ><img src={navIcon1} alt="LinkedIn"/></a>
                 <a href='https://github.com/manuamurali97' target='_blank' rel='noreferrer'><img src={navIcon2} alt="GitHub" className='github-icon'/></a>
@@ -61,7 +86,7 @@ export const NavBar = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
   }
 >
-  <span>Get to know me</span>
+  <span>{translations.navbar.about}</span>
 </button>
 
 

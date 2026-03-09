@@ -1,6 +1,9 @@
 import { Col } from "react-bootstrap";
+import { useLanguage } from "../context/LanguageContext";
 
 export const ProjectCard = ({ title, description, tech, imgUrl, github }) => {
+  const { translations } = useLanguage();
+
   return (
     <Col sm={6} md={4}>
       <div className="proj-imgbx">
@@ -15,7 +18,7 @@ export const ProjectCard = ({ title, description, tech, imgUrl, github }) => {
             rel="noreferrer"
             className="project-link"
           >
-            View on GitHub
+            {translations.projects.github}
           </a>
         </div>
       </div>

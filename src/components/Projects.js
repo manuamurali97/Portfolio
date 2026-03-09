@@ -1,83 +1,109 @@
 import { Container, Row, Col, Tab } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import { ProjectCard } from "./ProjectCard";
+import { useLanguage } from "../context/LanguageContext";
+
 import projImg1 from '../assets/img/chatappImg.png';
-import projImg2 from '../assets/img/taskappImg.png';
+import projImg2 from '../assets/img/aidocImg.png';
 import projImg3 from '../assets/img/motionImg.png';
 import projImg4 from '../assets/img/movieappImg.png';
 import projImg5 from '../assets/img/portfolioImg.png';
-import projImg6 from '../assets/img/churnImg.png';
 import projImg7 from '../assets/img/blogImg.png';
 import projImg8 from '../assets/img/formImg.png';
+import projImg9 from '../assets/img/taskappImg.png';
+import projImg10 from '../assets/img/valentineImg.png';
+import projImg11 from '../assets/img/loopImg.png';
 
 import colorSharp2 from '../assets/img/color-sharp2.png';
 
 export const Projects = () => {
+   const { translations } = useLanguage();
    const projects = [
+
+  // ===== SYSTEMS & PLATFORMS =====
+  
+
   {
-    title: "Real-Time Chat Application",
-    description: "Internal real-time messaging application for team communication. (The project is created for my previous organization, hence the  full code is private.)",
-    tech: "React, Node.js, MongoDB, Socket.IO",
+    title: "AI Document Learning Platform",
+    description: "A modular document ingestion and LLM-powered processing pipeline with asynchronous job handling and structured backend architecture.",
+    tech: "React, Node.js, Prisma, PostgreSQL, OpenAI API",
+    imgUrl: projImg2, // replace if needed
+    github: "https://github.com/manuamurali97/AI-Powered-Document-Learning-Platform",
+    category: "systems",
+  },
+
+  {
+    title: "Motion Analysis System",
+    description: "Computer vision-based pose tracking and movement visualization system generating trajectory overlays and analytical outputs.",
+    tech: "Python, OpenCV, MediaPipe",
+    imgUrl: projImg3,
+    github: "https://github.com/manuamurali97/Motion-Analysis-Python",
+    category: "systems",
+  },
+  {
+    title: "Real-Time Chat Platform",
+    description: "WebSocket-based real-time communication system with persistent session management and optimized message delivery architecture.",
+    tech: "React, Node.js, WebSockets, MongoDB",
     imgUrl: projImg1,
     github: "https://github.com/manuamurali97/ChatApp",
-    category:"fullstack",
+    category: "systems",
   },
+
+  // ===== WEB APPLICATIONS =====
   {
-    title: "Task Manager Application",
-    description: "Task management system with full CRUD functionality and a responsive UI with secure user authentication using JWT.",
-    tech: "MERN Stack (Javascript, React, Node.js, Express.js, MongoDB)",
-    imgUrl: projImg2,
-    github: "https://github.com/manuamurali97/task-manager-mern",
-    category:"fullstack",
-  },
-  {
-    title: "Blog Application",
-    description: "Blog platform with user authentication, CRUD operations for posts, and responsive design using Laravel framework.",
+    title: "Blog Platform",
+    description: "Authentication-enabled blog application with post management, authorization checks, and structured backend logic.",
     tech: "Laravel, MySQL",
     imgUrl: projImg7,
     github: "https://github.com/manuamurali97/Laravel-Blog-User-Authentication",
-    category:"fullstack",
+    category: "applications",
   },
   {
     title: "Movie Explorer",
-    description: "Live movie search powered by the TMDB API. The App displays movie posters, titles, and release years, with favorite functionality using React Context API.",
-    tech: "React, Context API, HTML, CSS",
+    description: "Interactive movie discovery interface powered by TMDB API with persistent favorites and clean state management.",
+    tech: "React, Context API",
     imgUrl: projImg4,
     github: "https://github.com/manuamurali97/Movie-Suggestion-App---React-JS",
-    category:"self",
+    category: "applications",
+  },
+
+
+  {
+    title: "Task Management Application",
+    description: "Full-stack task management platform featuring JWT-based authentication, protected APIs, and responsive UI.",
+    tech: "MERN Stack",
+    imgUrl: projImg9,
+    github: "https://github.com/manuamurali97/task-manager-mern",
+    category: "applications",
+  },
+
+  // ===== EXPERIMENTS =====
+  {
+    title: "Valentine Interactive Experience",
+    description: "Playful interactive web experiment exploring animation, motion design, and dynamic UI behavior.",
+    tech: "React, Framer Motion",
+    imgUrl: projImg10, // replace if needed
+    github: "https://github.com/manuamurali97/Valentine-game",
+    category: "experiments",
   },
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio website showcasing projects and skills.",
-    tech: "React, Bootstrap",
-    imgUrl: projImg5,
-    github: "https://github.com/manuamurali97/Portfolio-Website---React",
-    category:"self",
+    title: "LoopForge",
+    description: "Creative web tool that generates looping visual animations based on structured user prompts.",
+    tech: "React, Animation Systems",
+    imgUrl: projImg11, // replace with correct image
+    github: "https://github.com/manuamurali97/Loop-Forge-",
+    category: "experiments",
   },
+
   {
-    title: "Login & Registration Form",
-    description: "Responsive login and registration form with validation.",
-    tech: "React, Bootstrap",
+    title: "Login & Registration System",
+    description: "Role-based authentication system with session management and secure password handling.",
+    tech: "PHP, MySQL",
     imgUrl: projImg8,
     github: "https://github.com/manuamurali97/Full-Stack-Login_Register-Form",
-    category:"self",
-  },
-  {
-    title: "Motion Analysis using Python",
-    description: "Pose estimation and movement visualization of Kalaripayattu martial art.",
-    tech: "Python, MediaPipe, OpenCV",
-    imgUrl: projImg3,
-    github: "https://github.com/manuamurali97/Motion-Analysis-Python",
-    category:"python",
-  },
-  {
-    title: "Customer Churn Analysis using ML",
-    description: "Predictive model to identify customers likely to churn. Performed data cleaning, EDA, feature engineering, and model evaluation.",
-    tech: "Python, Scikit-learn, Pandas",
-    imgUrl: projImg6,
-    github: "https://github.com/manuamurali97/customer-churn-analysis",
-    category:"python",
-  },
+    category: "experiments",
+  }
+
 ];
 
 
@@ -86,45 +112,45 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Projects</h2>
-                        <p>Here are some of my recent projects.</p>
+                        <h2>{translations.projects.title}</h2>
+                        <p>{translations.projects.description}</p>
 
-                        <Tab.Container id="projects-tabs" defaultActiveKey="fullstack">
+                        <Tab.Container id="projects-tabs" defaultActiveKey="systems">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="fullstack">Full Stack Projects</Nav.Link>
+                                    <Nav.Link eventKey="systems">{translations.projects.systems}</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="python">Python Projects</Nav.Link>
+                                    <Nav.Link eventKey="applications">{translations.projects.applications}</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="self">Self Study Projects</Nav.Link>
+                                    <Nav.Link eventKey="experiments">{translations.projects.experiments}</Nav.Link>
                                 </Nav.Item>
                             </Nav>
 
                       <Tab.Content>
-                         <Tab.Pane eventKey="fullstack">
+                         <Tab.Pane eventKey="systems">
                              <Row>
-                                  {projects.filter((project) => project.category === "fullstack").map((project, index) => (
+                                  {projects.filter((project) => project.category === "systems").map((project, index) => (
                                         <ProjectCard key={index} {...project} />
                                     ))}
                             </Row>
                         </Tab.Pane>
 
-                        <Tab.Pane eventKey="python">
+                        <Tab.Pane eventKey="applications">
                             <Row className="justify-content-center">
                             {projects
-                                .filter((project) => project.category === "python")
+                                .filter((project) => project.category === "applications")
                                 .map((project, index) => (
                                 <ProjectCard key={index} {...project} />
                                 ))}
                             </Row>
                         </Tab.Pane>
 
-                        <Tab.Pane eventKey="self">
+                        <Tab.Pane eventKey="experiments">
                             <Row>
                             {projects
-                                .filter((project) => project.category === "self")
+                                .filter((project) => project.category === "experiments")
                                 .map((project, index) => (
                                 <ProjectCard key={index} {...project} />
                                 ))}

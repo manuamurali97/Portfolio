@@ -1,9 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { useLanguage } from "../context/LanguageContext";
 //import logo from '../assets/img/logo.svg';
 import logo from '../assets/img/M-logo.png';
 
 export const Footer = () => 
 {
+    const { translations } = useLanguage();
 
     return(
         <footer className="footer">
@@ -13,7 +15,7 @@ export const Footer = () =>
                     <img src= {logo} alt="Logo"/>
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
-                        <p>&copy; 2026 Manua Murali · Built with React</p>
+                    <p>{translations.footer.text}</p>
                     </Col>
                 </Row>
 
